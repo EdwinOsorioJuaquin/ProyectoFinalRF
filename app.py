@@ -14,8 +14,24 @@ app = Flask(__name__)
 names = ['Alfredo_Daza','Brando_Armas', 'Edwin_Osorio', 'Emanuel_Rojas','Jael_Estefanero']
 
 # Cargar el modelo
-MODEL_PATH = 'modelo_final_CNN.h5'
+MODEL_PATH = 'https://github.com/EdwinOsorioJuaquin/Producto_MejorAlgoritmo/releases/download/v1.0.0/modelo_final_CNN.h5'
 model = load_model(MODEL_PATH)
+print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
+
+# Función para descargar el modelo
+def download_model(model_url):
+    response = requests.get(model_url)
+    with open('modelo_final_CNN.h5', 'wb') as f:
+        f.write(response.content)
+
+# Descargar el modelo si no existe
+if not os.path.exists('modelo_final_CNN.h5'):
+    print('Descargando el modelo...')
+    download_model(MODEL_URL)
+    print('Modelo descargado exitosamente.')
+
+# Cargar el modelo
+model = load_model('modelo_final_CNN.h5')
 print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
 
 # Función de Predicción del Modelo
