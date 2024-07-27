@@ -13,7 +13,7 @@ app = Flask(__name__)
 names = ['Alfredo_Daza','Brando_Armas', 'Edwin_Osorio', 'Emanuel_Rojas','Jael_Estefanero']
 
 # Cargar el modelo
-MODEL_PATH = 'https://github.com/EdwinOsorioJuaquin/Producto_MejorAlgoritmo/releases/download/v1.0.0/modelo_final_CNN.h5'
+MODEL_PATH = 'https://modelocnn.s3.us-east-2.amazonaws.com/modelo_final_CNN.h5'
 model = load_model(MODEL_PATH)
 print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
 
