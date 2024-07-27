@@ -1,4 +1,9 @@
-# Importación de librerías 
+# Cargar el modelo
+MODEL_PATH = 'https://github.com/EdwinOsorioJuaquin/Producto_MejorAlgoritmo/releases/download/v1.0.0/modelo_final_CNN.h5'
+model = load_model(MODEL_PATH)
+print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
+
+import requests
 from keras.models import load_model
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
@@ -10,7 +15,6 @@ import os
 app = Flask(__name__)
 
 # Definición de las Clases y Carga del Modelo
-# Nombres de las clases
 names = ['Alfredo_Daza','Brando_Armas', 'Edwin_Osorio', 'Emanuel_Rojas','Jael_Estefanero']
 
 # Cargar el modelo
@@ -64,3 +68,4 @@ def upload():
 
 if __name__ == '__main__':
     app.run(debug=False, threaded=False)
+
