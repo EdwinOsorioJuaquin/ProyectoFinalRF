@@ -12,10 +12,8 @@ app = Flask(__name__)
 # Definición de las Clases y Carga del Modelo
 names = ['Alfredo_Daza','Brando_Armas', 'Edwin_Osorio', 'Emanuel_Rojas','Jael_Estefanero']
 
-# Cargar el modelo
-MODEL_PATH = 'https://modelocnn.s3.us-east-2.amazonaws.com/modelo_final_CNN.h5'
-model = load_model(MODEL_PATH)
-print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
+# URL del modelo almacenado en AWS S3
+MODEL_URL = 'https://your-bucket-name.s3.amazonaws.com/modelo_final_CNN.h5'
 
 # Función para descargar el modelo
 def download_model(model_url):
@@ -63,4 +61,5 @@ def upload():
 
 if __name__ == '__main__':
     app.run(debug=False, threaded=False)
+
 
