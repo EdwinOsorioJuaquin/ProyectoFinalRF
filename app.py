@@ -1,8 +1,3 @@
-# Cargar el modelo
-MODEL_PATH = 'https://github.com/EdwinOsorioJuaquin/Producto_MejorAlgoritmo/releases/download/v1.0.0/modelo_final_CNN.h5'
-model = load_model(MODEL_PATH)
-print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
-
 import requests
 from keras.models import load_model
 from flask import Flask, request, render_template
