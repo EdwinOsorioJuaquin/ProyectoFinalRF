@@ -14,7 +14,7 @@ app = Flask(__name__)
 names = ['Alfredo_Daza','Brando_Armas', 'Edwin_Osorio', 'Emanuel_Rojas','Jael_Estefanero']
 
 # Cargar el modelo
-MODEL_PATH = 'C:/Users/brand/OneDrive/Escritorio/Producto/Algoritmos Programa/modelo_final_CNN.h5'
+MODEL_PATH = 'modelo_final_CNN.h5'
 model = load_model(MODEL_PATH)
 print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
 
