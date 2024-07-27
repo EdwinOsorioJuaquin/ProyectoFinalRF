@@ -1,3 +1,1 @@
-*.h5 filter=lfs diff=lfs merge=lfs -text
-*.ipynb filter=lfs diff=lfs merge=lfs -text
-DataPersonaExperimento/* filter=lfs diff=lfs merge=lfs -text
+
