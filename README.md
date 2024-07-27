@@ -1,8 +1,8 @@
-#Proyecto Final de Reconocimiento Facial
+# Proyecto Final de Reconocimiento Facial
 
 Implementaremos una red neuronal usando keras-tensorflow y la ejecutaremos en un servicio web de flask
 
-#1. Preparación del entorno
+# 1. Preparación del entorno
 
 $ conda create -n APIRF anaconda python=3.7.16
 $ conda activate APIRF
@@ -14,6 +14,6 @@ $ pip install jupyter
 $ pip install keras==2.6.0
 $ pip install numpy scipy Pillow cython matplotlib scikit-image opencv-python h5py imgaug IPython[all]
 
-#2. Probar el API de Flask
+# 2. Probar el API de Flask
 
 $ python app.py
